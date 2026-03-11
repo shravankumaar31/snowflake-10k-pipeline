@@ -13,6 +13,7 @@ The architecture follows a staged data platform pattern:
 6. AWS Lambda orchestrates the full flow on EventBridge schedule; CloudWatch monitors execution; SNS notifies on success/failure; SQS DLQ captures failed Lambda invocations.
 7. Tableau consumes processed and model outputs from local extract, Athena/S3, or exported CSVs.
 
+
 ## Repository Layout
 
 ```text
@@ -111,6 +112,8 @@ terraform apply \
 4. EventBridge rule triggers yearly by default (`rate(1 year)`), or set a custom schedule with `schedule_expression`.
 
 ## Tableau Dashboard Build Guide
+
+Live dashboard: [View the Snowflake Financial Dashboard](https://public.tableau.com/app/profile/shravan.kumaar/viz/Snowflake_Dashboard/Dashboard1)
 
 ### Data Connection Options
 1. Direct file mode:
